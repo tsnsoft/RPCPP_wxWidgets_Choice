@@ -1,0 +1,38 @@
+[
+    {
+        "caretX": 1,
+        "caretY": 32,
+        "filename": "D:/Projects/CppProjects/Programming_in_CPP_2025/Topic6/RPCPP_wxWidgets_Choice/main.cpp",
+        "focused": false,
+        "isOpen": false,
+        "left": 0,
+        "top": 525
+    },
+    {
+        "caretX": 13,
+        "caretY": 21,
+        "filename": "D:/Projects/CppProjects/Programming_in_CPP_2025/Topic6/RPCPP_wxWidgets_Choice/main.h",
+        "focused": false,
+        "isOpen": false,
+        "left": 0,
+        "top": 300
+    },
+    {
+        "caretX": 2,
+        "caretY": 38,
+        "filename": "D:/Projects/CppProjects/Programming_in_CPP_2025/Topic6/RPCPP_wxWidgets_Choice/controls.cpp",
+        "focused": false,
+        "isOpen": false,
+        "left": 0,
+        "top": 525
+    },
+    {
+        "caretX": 1,
+        "caretY": 1,
+        "filename": "D:/Projects/CppProjects/Programming_in_CPP_2025/Topic6/RPCPP_wxWidgets_Choice/gui.h",
+        "focused": false,
+        "isOpen": false,
+        "left": 0,
+        "top": 0
+    }
+]
