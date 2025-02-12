@@ -13,10 +13,10 @@ CXXFLAGS = $(CXXINCS) "-g3" "-pipe" "-Wall" "-pipe" "-mthreads" "-D__GNUWIN32__"
 CFLAGS   = $(INCS) "-g3" "-pipe" "-Wall" "-D_DEBUG"
 WINDRESFLAGS = 
 RES      = RPCPP_wxWidgets_Choice.res
-OBJ      = controls.o gui.o main.o $(RES)
+OBJ      = main.o gui.o controls.o $(RES)
 BIN      = RPCPP_wxWidgets_Choice.exe
-LINKOBJ  = "controls.o" "gui.o" "main.o" "RPCPP_wxWidgets_Choice.res"
-CLEANOBJ = "controls.o" "gui.o" "main.o" "RPCPP_wxWidgets_Choice.res" "RPCPP_wxWidgets_Choice.exe"
+LINKOBJ  = "main.o" "gui.o" "controls.o" "RPCPP_wxWidgets_Choice.res"
+CLEANOBJ = "main.o" "gui.o" "controls.o" "RPCPP_wxWidgets_Choice.res" "RPCPP_wxWidgets_Choice.exe"
 
 .PHONY: all all-before all-after clean clean-custom
 
@@ -29,14 +29,14 @@ RPCPP_wxWidgets_Choice.exe: $(OBJ)
 
 	$(CXX) $(LINKOBJ) -o "RPCPP_wxWidgets_Choice.exe" $(LIBS)
 
-controls.o: controls.cpp main.h gui.h
-	$(CXX) -c "controls.cpp" -o "controls.o" $(CXXFLAGS) 
+main.o: main.cpp main.h gui.h
+	$(CXX) -c "main.cpp" -o "main.o" $(CXXFLAGS) 
 
 gui.o: gui.cpp main.h gui.h
 	$(CXX) -c "gui.cpp" -o "gui.o" $(CXXFLAGS) 
 
-main.o: main.cpp main.h gui.h
-	$(CXX) -c "main.cpp" -o "main.o" $(CXXFLAGS) 
+controls.o: controls.cpp main.h gui.h
+	$(CXX) -c "controls.cpp" -o "controls.o" $(CXXFLAGS) 
 
 RPCPP_wxWidgets_Choice.res: RPCPP_wxWidgets_Choice.rc 
 	$(WINDRES) -i "RPCPP_wxWidgets_Choice.rc" --input-format=rc -o "RPCPP_wxWidgets_Choice.res" -O coff $(WINDRESFLAGS) 
