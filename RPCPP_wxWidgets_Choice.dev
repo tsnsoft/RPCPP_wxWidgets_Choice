@@ -11,8 +11,8 @@ ResourceIncludes =
 MakeIncludes = 
 PrivateResource = RPCPP_wxWidgets_Choice.rc
 Compiler = 
-CppCompiler = -pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DwxUSE_UNICODE -Wall -g -O0 -ID:\Development\RedPanda-CPP\wxWidgets\include -ID:\Development\RedPanda-CPP\wxWidgets\lib\gcc_lib\mswud
-Linker = -LD:\Development\RedPanda-CPP\wxWidgets\lib\gcc_lib -mthreads -lwxmsw32ud_core -lwxbase32ud -lwxpngd -lwxjpegd -lwxtiffd -lwxzlibd -lwxregexud -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lcomctl32 -lwsock32 -lodbc32 -lshlwapi -lversion -loleacc -luxtheme -mwindows -lstdc++ -finput-charset=utf-8
+CppCompiler = -pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DwxUSE_UNICODE -Wall -g -O0
+Linker = -mthreads -lwxmsw32ud_core -lwxbase32ud -lwxpngd -lwxjpegd -lwxtiffd -lwxzlibd -lwxregexud -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lcomctl32 -lwsock32 -lodbc32 -lshlwapi -lversion -loleacc -luxtheme -mwindows -lstdc++ -finput-charset=utf-8
 ResourceCommand = 
 IsCpp = 1
 Icon = 
@@ -44,7 +44,7 @@ UseUTF8 = 1
 
 
 [Unit1]
-FileName = main.cpp
+FileName = gui.cpp
 CompileCpp = 1
 Folder = Sources
 Compile = 1
@@ -77,19 +77,6 @@ SyncProduct = 1
 
 
 [Unit2]
-FileName = main.h
-CompileCpp = 0
-Folder = Headers
-Compile = 0
-Link = 0
-Priority = 1000
-OverrideBuildCmd = 0
-BuildCmd = 
-FileEncoding = PROJECT
-RealEncoding = UTF-8
-
-
-[Unit3]
 FileName = gui.h
 CompileCpp = 0
 Folder = Headers
@@ -102,8 +89,8 @@ FileEncoding = PROJECT
 RealEncoding = UTF-8
 
 
-[Unit4]
-FileName = gui.cpp
+[Unit3]
+FileName = main.cpp
 CompileCpp = 1
 Folder = Sources
 Compile = 1
@@ -115,7 +102,7 @@ FileEncoding = PROJECT
 RealEncoding = UTF-8
 
 
-[Unit5]
+[Unit4]
 FileName = controls.cpp
 CompileCpp = 1
 Folder = Sources
@@ -128,8 +115,9 @@ FileEncoding = PROJECT
 RealEncoding = UTF-8
 
 
-[Unit6]
+[Unit5]
 FileName = gui.fbp
+CompileCpp = 1
 Folder = Others
 Compile = 0
 Link = 0
@@ -138,7 +126,19 @@ OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
 RealEncoding = ASCII
-CompileCpp = 1
+
+
+[Unit6]
+FileName = main.h
+Folder = Headers
+Compile = 0
+Link = 0
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = UTF-8
+CompileCpp = 0
 
 
 [Unit7]
